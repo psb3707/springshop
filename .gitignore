@@ -202,8 +202,8 @@ gradle-app.setting
 *.log
 
 # 환경 설정 파일 (예: 로컬에서만 사용되는 설정)
-src/main/**/application.properties
-src/main/**/application.yml
+src/main/resources/application.properties
+src/main/resources/application.yml
 
 # 운영 체제 생성 파일
 .DS_Store
