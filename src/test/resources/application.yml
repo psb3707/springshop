@@ -1,10 +1,17 @@
-spring: # 테스트 에서는 테스트 폴더 내 resources가 우선권을 가짐
+#spring: # 테스트 에서는 테스트 폴더 내 resources가 우선권을 가짐
+#  datasource:
+#    url: jdbc:h2:mem:test # 메모리 DB사용
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+spring:
   datasource:
-    url: jdbc:h2:mem:test # 메모리 DB사용
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-
+    url: jdbc:mysql://database-1.cxua8wo0mbwg.ap-northeast-2.rds.amazonaws.com:3306/myshop?serverTimezone=Asia/Seoul
+    #    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: "seungbeom"
+    password: "psb011031!"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
       ddl-auto: create # 애플리케이션 생성 시점에 모든 테이블 drop 후 다시 생성
